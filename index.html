@@ -6,9 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h2 class="text-4xl font-bold text-center mt-12">
+        Welcome To Weather Check Application
+      </h2>
+    </header>
+
+    <main>
+      <!-- searching section -->
+      <section>
+        <div class="flex justify-center mt-8">
+          <input
+            id="search-field"
+            class="w-1/4 p-2 rounded shadow-2xl mr-2"
+            type="text"
+            placeholder="Enter a location for Weather"
+          />
+
+          <button
+            onclick="searchField()"
+            class="p-2 bg-indigo-700 text-white rounded shadow-2xl"
+          >
+            Search
+          </button>
+        </div>
+      </section>
+      <!-- display section -->
+      <section>
+        <div class="flex justify-center">
+          <div id="icon" class="m-12">
+            <i
+              id="icon-1"
+              style="display: none"
+              class="fas fa-smog text-7xl text-yellow-200"
+            ></i>
+            <i
+              id="icon-2"
+              style="display: none"
+              class="fas fa-cloud text-7xl text-yellow-400"
+            ></i>
+
+            <i
+              id="icon-3"
+              style="display: none"
+              class="fas fa-sun text-7xl text-yellow-400"
+            ></i>
+
+            <!-- 
+           
+            <i
+              id="icon-4"
+              style="display: none"
+              class="fas fa-cloud-showers-heavy text-7xl text-yellow-400"
+            ></i>
+            <i
+              id="icon-5"
+              style="display: none"
+              class="fas fa-cloud-rain text-7xl text-yellow-400"
+            ></i> -->
+            <!-- <i class="fas fa-cloud-moon-rain"></i> -->
+          </div>
+          <div class="m-12 p-16">
+            <h2 class="text-2xl font-bold text-indigo-800">
+              Temperature:<span id="temperature"></span>
+            </h2>
+            <h2 class="text-2xl font-bold text-indigo-800">
+              Feels Like:<span id="feels-like"></span>
+            </h2>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- js file -->
+    <script src="app.js"></script>
+  </body>
 </html>
